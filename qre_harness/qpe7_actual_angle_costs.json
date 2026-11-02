@@ -1,0 +1,93 @@
+{
+  "qpe7_angles": [
+    {
+      "angle_rad": 0.1234567,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": 0.31415926,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": 0.52359877,
+      "t_per_rotation": 102
+    },
+    {
+      "angle_rad": 0.69314718,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": 0.87396487,
+      "t_per_rotation": 102
+    },
+    {
+      "angle_rad": 1.04719755,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": -1.57079633,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -0.78539816,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -1.57079633,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -0.39269908,
+      "t_per_rotation": 98
+    },
+    {
+      "angle_rad": -0.78539816,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -1.57079633,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -0.19634954,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": -0.39269908,
+      "t_per_rotation": 98
+    },
+    {
+      "angle_rad": -0.78539816,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -1.57079633,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -0.09817477,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": -0.19634954,
+      "t_per_rotation": 100
+    },
+    {
+      "angle_rad": -0.39269908,
+      "t_per_rotation": 98
+    },
+    {
+      "angle_rad": -0.78539816,
+      "t_per_rotation": 0
+    },
+    {
+      "angle_rad": -1.57079633,
+      "t_per_rotation": 0
+    }
+  ],
+  "actual_sum": 1198,
+  "model_estimate": 2163,
+  "uniform_mean_prediction": 2122.3,
+  "n_special_zero": 9,
+  "n_total": 21
+}

@@ -56,6 +56,13 @@ def rates(col, rows):
     }
 
 
+def unit_breakdown(rows):
+    """reporting_unit 分类：T / Toffoli / Phys / Mixed / CostModel / Benchmark / NA。
+    口径说明见 coding_manual.md 与论文 §5.2（单位重分类敏感性，非唯一口径）。"""
+    from collections import Counter
+    return Counter(r.get("reporting_unit", "") for r in rows)
+
+
 def main() -> int:
     rows = load()
     print(f"statistical sample n = {len(rows)} (included=TRUE)")
@@ -67,6 +74,22 @@ def main() -> int:
                   "permissive ((Y+P)/applicable)", "upper_bound ((Y+U)/22)",
                   "decidable (Y/(Y+P+N))"):
             print(f"  {k:34s}: {out[k]}")
+
+    # --- reporting-unit restricted denominators (§5.2 sensitivity) ---
+    print("\n== reporting-unit reclassification (sensitivity) ==")
+    print("  unit distribution:", dict(unit_breakdown(rows)))
+    t_rows = [r for r in rows if r.get("reporting_unit") == "T"]
+    print(f"  T-count-reporting subset n = {len(t_rows)} "
+          f"(papers: {[r['paper_id'] for r in t_rows]})")
+    for col, label in COLUMNS:
+        out = rates(col, t_rows)
+        print(f"  {label}: strict={out['strict_full (Y/22)']} "
+              f"permissive={out['permissive ((Y+P)/applicable)']}")
+    for unit in ("Toffoli", "Phys", "Mixed", "CostModel", "Benchmark"):
+        sub = [r for r in rows if r.get("reporting_unit") == unit]
+        compY = sum(1 for r in sub if r["comparability_code"] == "Y")
+        epsY = sum(1 for r in sub if r["epsilon_code"] == "Y")
+        print(f"  unit={unit:10s} n={len(sub):2d}  comparableY={compY}  epsY={epsY}")
     return 0
 
 

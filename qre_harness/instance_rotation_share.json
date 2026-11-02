@@ -1,0 +1,72 @@
+[
+  {
+    "instance": "TFIM-J1.0",
+    "T_base": 248,
+    "R": 128,
+    "T_total": 13432,
+    "rotation_share": 98.15
+  },
+  {
+    "instance": "TFIM-J0.5",
+    "T_base": 248,
+    "R": 128,
+    "T_total": 13432,
+    "rotation_share": 98.15
+  },
+  {
+    "instance": "TFIM-h0.3",
+    "T_base": 248,
+    "R": 128,
+    "T_total": 13432,
+    "rotation_share": 98.15
+  },
+  {
+    "instance": "TFIM-32",
+    "T_base": 504,
+    "R": 256,
+    "T_total": 26872,
+    "rotation_share": 98.12
+  },
+  {
+    "instance": "TFIM-64",
+    "T_base": 1016,
+    "R": 512,
+    "T_total": 53752,
+    "rotation_share": 98.11
+  },
+  {
+    "instance": "Hubbard-32",
+    "T_base": 1016,
+    "R": 512,
+    "T_total": 53752,
+    "rotation_share": 98.11
+  },
+  {
+    "instance": "Hubbard-64",
+    "T_base": 2040,
+    "R": 1024,
+    "T_total": 107512,
+    "rotation_share": 98.1
+  },
+  {
+    "instance": "Chem-H2",
+    "T_base": 56,
+    "R": 32,
+    "T_total": 3352,
+    "rotation_share": 98.33
+  },
+  {
+    "instance": "Chem-LiH",
+    "T_base": 4088,
+    "R": 2048,
+    "T_total": 215032,
+    "rotation_share": 98.1
+  },
+  {
+    "instance": "QPE-7",
+    "T_base": 0,
+    "R": 21,
+    "T_total": 2163,
+    "rotation_share": 100.0
+  }
+]
