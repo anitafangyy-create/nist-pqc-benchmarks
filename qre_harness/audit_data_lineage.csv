@@ -1,0 +1,109 @@
+result_id,instance,tool,metric,input_file,source_function,output_file,measured_or_derived,calibration_used,independent
+R001,(global),normalization,c_cal(0.0001),ledger.json,MEASURED_C / anchor back-computation,ledger.json,derived,yes,"no (pyLIQTR 1.4.2 rotation-cost model values (3.02*log2(1/eps)+0.77, sd 2.06, seed 0))"
+R002,(global),normalization,c_cal(1e-06),ledger.json,MEASURED_C / anchor back-computation,ledger.json,derived,yes,"no (pyLIQTR 1.4.2 rotation-cost model values (3.02*log2(1/eps)+0.77, sd 2.06, seed 0))"
+R003,(global),normalization,c_cal(1e-08),ledger.json,MEASURED_C / anchor back-computation,ledger.json,derived,yes,"no (pyLIQTR 1.4.2 rotation-cost model values (3.02*log2(1/eps)+0.77, sd 2.06, seed 0))"
+R004,(global),normalization,c_cal(1e-10),ledger.json,MEASURED_C / anchor back-computation,ledger.json,derived,yes,no (TFIM-J1.0 totals: (13432-248)/128)
+R005,(microbenchmark),pyLIQTR rz_decomp,c_microbench_mean(0.0001),microbenchmark_c.py angles (10 generic),"rz_decomp(rads, precision).get_T_count()",c_microbenchmark_full.json,measured_output,no,"yes (n=10, mean=39.2, sd=2.35, range 36-42)"
+R006,(microbenchmark),pyLIQTR rz_decomp,c_microbench_mean(1e-06),microbenchmark_c.py angles (10 generic),"rz_decomp(rads, precision).get_T_count()",c_microbenchmark_full.json,measured_output,no,"yes (n=10, mean=61.2, sd=1.93, range 58-64)"
+R007,(microbenchmark),pyLIQTR rz_decomp,c_microbench_mean(1e-08),microbenchmark_c.py angles (10 generic),"rz_decomp(rads, precision).get_T_count()",c_microbenchmark_full.json,measured_output,no,"yes (n=10, mean=80, sd=2.49, range 76-84)"
+R008,(microbenchmark),pyLIQTR rz_decomp,c_microbench_mean(1e-10),microbenchmark_c.py angles (10 generic),"rz_decomp(rads, precision).get_T_count()",c_microbenchmark_full.json,measured_output,no,"yes (n=10, mean=101.8, sd=1.99, range 100-106)"
+R009,TFIM-J1.0,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R010,TFIM-J1.0,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R011,TFIM-J1.0,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R012,TFIM-J1.0,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R013,TFIM-J1.0,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R014,TFIM-J1.0,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R015,TFIM-J1.0,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R016,TFIM-J1.0,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R017,TFIM-J1.0,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R018,TFIM-J1.0,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=13432, pred=13432)"
+R019,TFIM-J0.5,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R020,TFIM-J0.5,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R021,TFIM-J0.5,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R022,TFIM-J0.5,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R023,TFIM-J0.5,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R024,TFIM-J0.5,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R025,TFIM-J0.5,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R026,TFIM-J0.5,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R027,TFIM-J0.5,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R028,TFIM-J0.5,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=13432, pred=13432)"
+R029,TFIM-h0.3,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R030,TFIM-h0.3,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R031,TFIM-h0.3,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R032,TFIM-h0.3,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R033,TFIM-h0.3,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R034,TFIM-h0.3,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R035,TFIM-h0.3,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R036,TFIM-h0.3,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R037,TFIM-h0.3,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R038,TFIM-h0.3,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=13432, pred=13432)"
+R039,TFIM-32,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R040,TFIM-32,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R041,TFIM-32,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R042,TFIM-32,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R043,TFIM-32,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R044,TFIM-32,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R045,TFIM-32,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R046,TFIM-32,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R047,TFIM-32,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R048,TFIM-32,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=26872, pred=26872)"
+R049,TFIM-64,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R050,TFIM-64,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R051,TFIM-64,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R052,TFIM-64,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R053,TFIM-64,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R054,TFIM-64,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R055,TFIM-64,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R056,TFIM-64,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R057,TFIM-64,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R058,TFIM-64,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=53752, pred=53752)"
+R059,Hubbard-32,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R060,Hubbard-32,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R061,Hubbard-32,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R062,Hubbard-32,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R063,Hubbard-32,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R064,Hubbard-32,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R065,Hubbard-32,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R066,Hubbard-32,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R067,Hubbard-32,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R068,Hubbard-32,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=53752, pred=53752)"
+R069,Hubbard-64,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R070,Hubbard-64,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R071,Hubbard-64,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R072,Hubbard-64,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R073,Hubbard-64,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R074,Hubbard-64,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R075,Hubbard-64,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R076,Hubbard-64,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R077,Hubbard-64,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R078,Hubbard-64,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=107512, pred=107512)"
+R079,Chem-H2,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R080,Chem-H2,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R081,Chem-H2,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R082,Chem-H2,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R083,Chem-H2,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R084,Chem-H2,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R085,Chem-H2,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R086,Chem-H2,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R087,Chem-H2,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R088,Chem-H2,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=3352, pred=3352)"
+R089,Chem-LiH,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R090,Chem-LiH,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R091,Chem-LiH,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R092,Chem-LiH,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R093,Chem-LiH,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R094,Chem-LiH,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R095,Chem-LiH,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R096,Chem-LiH,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R097,Chem-LiH,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R098,Chem-LiH,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=215032, pred=215032)"
+R099,QPE-7,B_cirqft,t_base,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R100,QPE-7,B_cirqft,rotations,algorithms.py block_encoding,cirq_ft/qualtran t_complexity,ledger.json,measured_output,no,yes (independent compiler output)
+R101,QPE-7,A_pyliqtr,t_total,algorithms.py block_encoding,pyLIQTR estimate_resources (base + rotation-cost model),ledger.json,measured_output,no,yes (independent compiler output; rotation part is the tool's built-in cost model)
+R102,QPE-7,C_qsharp,t_base_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R103,QPE-7,C_qsharp,rotations_logical,run.py (B ledger T_base/R tuple),qsharp.estimate logicalCounts (Q# abstract circuit),ledger.json,measured_output,no,"no (input shares B's (T_base, R); independent stack, same specification)"
+R104,QPE-7,C_qsharp,phys_qubits,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R105,QPE-7,C_qsharp,runtime_s,run.py (B ledger T_base/R tuple),qsharp.estimate physicalCounts (Azure default QEC),ledger.json,measured_output,no,no (physical estimate of the shared abstract circuit)
+R106,QPE-7,D_naive,t_total,B ledger,"run_naive (counts Clifford+T, ignores rotations)",ledger.json,derived,no,no (derived from B's counts)
+R107,QPE-7,normalization,T_pred = T_base + R*c_cal(1e-10),ledger.json (B counts + MEASURED_C),CanonicalLedger.reconcile / T_total_at_ref,ledger.json / sweep_full.csv,derived,yes,no (uses calibration constant c_cal=103)
+R108,QPE-7,validation,calibration_residual,ledger.json,reconcile attribution_residual,ledger.json,derived,yes,"no (residual of the anchored identity; T_A=2163, pred=2163)"

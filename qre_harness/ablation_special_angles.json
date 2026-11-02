@@ -1,0 +1,95 @@
+{
+  "method": "pyLIQTR rz_decomp single-rotation synthesis, special vs generic angles",
+  "epsilon": 1e-10,
+  "note": "generic-mean reference taken from c_microbenchmark_100.json (n=100, seed 20261026); special-angle counts are fresh rz_decomp executions at the same precision",
+  "generic_mean": 101.06,
+  "generic_sd": 2.28,
+  "generic_min": 94,
+  "rows": [
+    {
+      "family": "clifford",
+      "label": "k=0 (\u03b8=0\u03c0/2)",
+      "angle_rad": 0.0,
+      "epsilon": 1e-10,
+      "t_per_rotation": 0
+    },
+    {
+      "family": "clifford",
+      "label": "k=1 (\u03b8=1\u03c0/2)",
+      "angle_rad": 1.570796326795,
+      "epsilon": 1e-10,
+      "t_per_rotation": 0
+    },
+    {
+      "family": "clifford",
+      "label": "k=2 (\u03b8=2\u03c0/2)",
+      "angle_rad": 3.14159265359,
+      "epsilon": 1e-10,
+      "t_per_rotation": 0
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^2",
+      "angle_rad": 0.785398163397,
+      "epsilon": 1e-10,
+      "t_per_rotation": 0
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^3",
+      "angle_rad": 0.392699081699,
+      "epsilon": 1e-10,
+      "t_per_rotation": 98
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^4",
+      "angle_rad": 0.196349540849,
+      "epsilon": 1e-10,
+      "t_per_rotation": 100
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^5",
+      "angle_rad": 0.098174770425,
+      "epsilon": 1e-10,
+      "t_per_rotation": 100
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^6",
+      "angle_rad": 0.049087385212,
+      "epsilon": 1e-10,
+      "t_per_rotation": 98
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^7",
+      "angle_rad": 0.024543692606,
+      "epsilon": 1e-10,
+      "t_per_rotation": 104
+    },
+    {
+      "family": "dyadic",
+      "label": "\u03c0/2^8",
+      "angle_rad": 0.012271846303,
+      "epsilon": 1e-10,
+      "t_per_rotation": 104
+    },
+    {
+      "family": "near-special",
+      "label": "\u03c0/4+1e-3",
+      "angle_rad": 0.786398163397,
+      "epsilon": 1e-10,
+      "t_per_rotation": 100
+    },
+    {
+      "family": "near-special",
+      "label": "\u03c0/8+1e-3",
+      "angle_rad": 0.393699081699,
+      "epsilon": 1e-10,
+      "t_per_rotation": 100
+    }
+  ],
+  "elapsed_s": 14.6
+}

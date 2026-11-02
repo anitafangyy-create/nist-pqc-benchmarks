@@ -1,0 +1,68 @@
+[
+  {
+    "instance": "TFIM-J1.0",
+    "n_qubits": 16,
+    "n_terms": 40,
+    "gate_precision": 1e-10,
+    "toolA_pyliqtr": {
+      "T": 13432,
+      "Clifford": 27515,
+      "LogicalQubits": 22
+    },
+    "toolB_cirqft": {
+      "T": 248,
+      "Rotations": 128,
+      "Clifford": 1146
+    },
+    "B_decomposed_T": 13432,
+    "raw_T_ratio": 54.2,
+    "attribution": {
+      "rotations": 128,
+      "T_per_rotation_at_1e-10": 103
+    }
+  },
+  {
+    "instance": "TFIM-J0.5",
+    "n_qubits": 16,
+    "n_terms": 40,
+    "gate_precision": 1e-10,
+    "toolA_pyliqtr": {
+      "T": 13432,
+      "Clifford": 27515,
+      "LogicalQubits": 22
+    },
+    "toolB_cirqft": {
+      "T": 248,
+      "Rotations": 128,
+      "Clifford": 1146
+    },
+    "B_decomposed_T": 13432,
+    "raw_T_ratio": 54.2,
+    "attribution": {
+      "rotations": 128,
+      "T_per_rotation_at_1e-10": 103
+    }
+  },
+  {
+    "instance": "TFIM-h0.3",
+    "n_qubits": 16,
+    "n_terms": 56,
+    "gate_precision": 1e-10,
+    "toolA_pyliqtr": {
+      "T": 13432,
+      "Clifford": 27515,
+      "LogicalQubits": 22
+    },
+    "toolB_cirqft": {
+      "T": 248,
+      "Rotations": 128,
+      "Clifford": 1146
+    },
+    "B_decomposed_T": 13432,
+    "raw_T_ratio": 54.2,
+    "attribution": {
+      "rotations": 128,
+      "T_per_rotation_at_1e-10": 103
+    }
+  }
+]

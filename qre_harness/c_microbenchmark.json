@@ -1,0 +1,87 @@
+{
+  "method": "pyLIQTR rz_decomp single-rotation synthesis (Ross\u2013Selinger grid)",
+  "angles": [
+    0.1234567,
+    0.31415926
+  ],
+  "epsilons": [
+    0.0001,
+    1e-06,
+    1e-08,
+    1e-10
+  ],
+  "note": "independent microbenchmark; not derived from TFIM totals",
+  "rows": [
+    {
+      "epsilon": 0.0001,
+      "angle": 0.1234567,
+      "t_per_rotation": 40
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 0.31415926,
+      "t_per_rotation": 40
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.1234567,
+      "t_per_rotation": 62
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.31415926,
+      "t_per_rotation": 62
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.1234567,
+      "t_per_rotation": 76
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.31415926,
+      "t_per_rotation": 82
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.1234567,
+      "t_per_rotation": 100
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.31415926,
+      "t_per_rotation": 100
+    }
+  ],
+  "summary": {
+    "0.0001": {
+      "mean": 40,
+      "sd": 0.0,
+      "min": 40,
+      "max": 40,
+      "n": 2
+    },
+    "1e-06": {
+      "mean": 62,
+      "sd": 0.0,
+      "min": 62,
+      "max": 62,
+      "n": 2
+    },
+    "1e-08": {
+      "mean": 79,
+      "sd": 4.24,
+      "min": 76,
+      "max": 82,
+      "n": 2
+    },
+    "1e-10": {
+      "mean": 100,
+      "sd": 0.0,
+      "min": 100,
+      "max": 100,
+      "n": 2
+    }
+  },
+  "elapsed_s": 15.1
+}

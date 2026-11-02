@@ -1,0 +1,7 @@
+{
+  "parameters_match": true,
+  "base_w_match": true,
+  "checksum_ok": true,
+  "roundtrip_ok": true,
+  "hash_diff_documented": true
+}

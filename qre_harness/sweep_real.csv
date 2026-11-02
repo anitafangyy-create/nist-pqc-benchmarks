@@ -1,0 +1,10 @@
+instance,n_qubits,T_base,R,T_pyliqtr,note
+TFIM-J1.0,16,248,128,13432,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+TFIM-J0.5,16,248,128,13432,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+TFIM-h0.3,16,248,128,13432,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+TFIM-32,32,504,256,26872,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+TFIM-64,64,1016,512,53752,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+Hubbard-32,32,1016,512,53752,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+Hubbard-64,64,2040,1024,107512,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+Chem-H2,4,56,32,3352,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"
+Chem-LiH,12,4088,2048,215032,"measured 2026-10-25 (ledger.json, pyliqtr1.4.2/qualtran0.4.0)"

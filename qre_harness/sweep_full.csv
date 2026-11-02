@@ -1,0 +1,11 @@
+instance,n_qubits,n_terms,R,T_base,c_at_1e-10,T_total_1e-10,status,convention
+TFIM-J1.0,16,40,128,248,103,13432,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+TFIM-J0.5,16,40,128,248,103,13432,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+TFIM-h0.3,16,56,128,248,103,13432,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+TFIM-32,32,84,256,504,103,26872,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+TFIM-64,64,176,512,1016,103,53752,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+Hubbard-32,32,144,512,1016,103,53752,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+Hubbard-64,64,304,1024,2040,103,107512,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+Chem-H2,4,14,32,56,103,3352,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+Chem-LiH,12,630,2048,4088,103,215032,measured,circuit-level abstract rotations (cirq_ft t_complexity)
+QPE-7,7,0,21,0,103,2163,measured,QPE diagonal oracle + inverse QFT (non-LCU)

@@ -1,0 +1,43 @@
+{
+  "method": "OLS fit of mean rotation cost vs log2(1/eps) + stratified bootstrap CI (resampling angles within each precision)",
+  "fit_points": 4,
+  "fit_degrees_of_freedom": 2,
+  "slope": 3.0491,
+  "intercept": -0.138,
+  "r2": 1.0,
+  "residuals": {
+    "0.0001": -0.058,
+    "1e-06": 0.024,
+    "1e-08": 0.126,
+    "1e-10": -0.092
+  },
+  "fit_interval": "eps in [1e-10, 0.0001], i.e. log2(1/eps) in [13.3, 33.2]",
+  "ci95_per_precision": {
+    "0.0001": {
+      "mean": 40.32,
+      "ci95_lo": 39.88,
+      "ci95_hi": 40.76,
+      "halfwidth": 0.44
+    },
+    "1e-06": {
+      "mean": 60.66,
+      "ci95_lo": 60.28,
+      "ci95_hi": 61.04,
+      "halfwidth": 0.38
+    },
+    "1e-08": {
+      "mean": 81.02,
+      "ci95_lo": 80.56,
+      "ci95_hi": 81.46,
+      "halfwidth": 0.45
+    },
+    "1e-10": {
+      "mean": 101.06,
+      "ci95_lo": 100.62,
+      "ci95_hi": 101.5,
+      "halfwidth": 0.44
+    }
+  },
+  "caveat": "bootstrap resamples angles; if rotations within one circuit are correlated, circuit/instance-level resampling is required and would widen these intervals",
+  "seed": 20261026
+}

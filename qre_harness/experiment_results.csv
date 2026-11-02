@@ -1,0 +1,30 @@
+source,size,n_qubits,n_terms,R,T_base,c_at_1e-10,T_total_normalized,convention,note
+pyLIQTR_measured,TFIM-J1.0,16,40,128,248,103,13432,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=27515, B Clifford=1146"
+azure_qre_measured,TFIM-J1.0,16,40,128,248,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=772330
+pyLIQTR_measured,TFIM-J0.5,16,40,128,248,103,13432,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=27515, B Clifford=1146"
+azure_qre_measured,TFIM-J0.5,16,40,128,248,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=772330
+pyLIQTR_measured,TFIM-h0.3,16,56,128,248,103,13432,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=27515, B Clifford=1146"
+azure_qre_measured,TFIM-h0.3,16,56,128,248,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=772330
+pyLIQTR_measured,TFIM-32,32,84,256,504,103,26872,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=55063, B Clifford=2326"
+azure_qre_measured,TFIM-32,32,84,256,504,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=933218
+pyLIQTR_measured,TFIM-64,64,176,512,1016,103,53752,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=110163, B Clifford=4690"
+azure_qre_measured,TFIM-64,64,176,512,1016,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=1454400
+pyLIQTR_measured,Hubbard-32,32,144,512,1016,103,53752,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=110259, B Clifford=4786"
+azure_qre_measured,Hubbard-32,32,144,512,1016,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=1332450
+pyLIQTR_measured,Hubbard-64,64,304,1024,2040,103,107512,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=220579, B Clifford=9634"
+azure_qre_measured,Hubbard-64,64,304,1024,2040,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=1688400
+pyLIQTR_measured,Chem-H2,4,14,32,56,103,3352,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=6871, B Clifford=278"
+azure_qre_measured,Chem-H2,4,14,32,56,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=332750
+pyLIQTR_measured,Chem-LiH,12,630,2048,4088,103,215032,circuit-level abstract rotations (cirq_ft t_complexity),"2026-10-25 实测 ledger.json；T_base+R*c=T_total 残差=0；A Clifford=443839, B Clifford=21950"
+azure_qre_measured,Chem-LiH,12,630,2048,4088,n/a,n/a,logical: rotation-abstract (Q#); physical: Azure QEC,2026-10-25 实测；逻辑级 T/R 与 B 一致；physicalQubits=1203750
+cirq_trotter,4x4=16,16,40,40,n/a,n/a,n/a,"Trotter circuit, 1 rotation per Pauli term",独立验证 R 缩放方向；口径≠实测电路级 R，不可直接比较
+cirq_trotter,4x6=24,24,62,62,n/a,n/a,n/a,"Trotter circuit, 1 rotation per Pauli term",独立验证 R 缩放方向；口径≠实测电路级 R，不可直接比较
+cirq_trotter,4x8=32,32,84,84,n/a,n/a,n/a,"Trotter circuit, 1 rotation per Pauli term",独立验证 R 缩放方向；口径≠实测电路级 R，不可直接比较
+cirq_trotter,8x8=64,64,176,176,n/a,n/a,n/a,"Trotter circuit, 1 rotation per Pauli term",独立验证 R 缩放方向；口径≠实测电路级 R，不可直接比较
+openfermion_JW,2x2=8,8,29,16,n/a,n/a,n/a,Hamiltonian-level non-Z Pauli terms,估计参考口径（历史 sweep_full estimate 行同款），非实测
+openfermion_JW,2x4=16,16,65,40,n/a,n/a,n/a,Hamiltonian-level non-Z Pauli terms,估计参考口径（历史 sweep_full estimate 行同款），非实测
+openfermion_JW,4x4=32,32,145,96,n/a,n/a,n/a,Hamiltonian-level non-Z Pauli terms,估计参考口径（历史 sweep_full estimate 行同款），非实测
+openfermion_JW,4x8=64,64,305,208,n/a,n/a,n/a,Hamiltonian-level non-Z Pauli terms,估计参考口径（历史 sweep_full estimate 行同款），非实测
+pyLIQTR_measured,QPE-7,7,0,21,0,103,2163,QPE,"族外实例：旋转主导（R=21, T_base=0），打破 T_base=2R-8"
+azure_qre_measured,QPE-7,7,0,21,0,103,2163,QPE,逻辑级 T/R 与 B 一致（独立栈复现）；物理级 physicalQubits=721886
+cirq_ft_measured,QPE-7,7,0,21,0,103,2163,QPE,族外实例 B 读数

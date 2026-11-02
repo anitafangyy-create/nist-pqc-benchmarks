@@ -1,0 +1,32 @@
+{
+  "cbar_frozen": 101.06,
+  "n_heldout": 9,
+  "excluded_anchor": "TFIM-J1.0",
+  "mae": 1004.704,
+  "rmse": 1566.341,
+  "mean_absolute_relative_error": 0.0185,
+  "grouped_mre": {
+    "TFIM": {
+      "n": 4,
+      "mre": 0.0185
+    },
+    "Hubbard": {
+      "n": 2,
+      "mre": 0.0185
+    },
+    "Chem": {
+      "n": 2,
+      "mre": 0.0185
+    },
+    "QPE": {
+      "n": 1,
+      "mre": 0.0188
+    }
+  },
+  "cbar_ci95_bootstrap": [
+    100.6,
+    101.5
+  ],
+  "bootstrap_B": 2000,
+  "seed": 20261026
+}

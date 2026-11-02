@@ -1,0 +1,24 @@
+{
+  "method": "Monte-Carlo error decomposition on stored rz_decomp angle costs (c_microbenchmark_100.json), R=128 rotations",
+  "R": 128,
+  "n_mc": 2000,
+  "seed": 20261026,
+  "inputs": {
+    "mean_c(1e-10)": 101.06,
+    "mean_c(1e-8)": 81.02,
+    "sd_c(1e-10)": 2.2822
+  },
+  "uniform_1e-10": {
+    "sum_mean": 12935.468,
+    "sum_sd": 25.346,
+    "pred_Rcbar": 12935.68,
+    "bias_sum_vs_pred": -0.212
+  },
+  "mixed_precision_64x1e-8_64x1e-10": {
+    "sum_mean": 11653.943,
+    "sum_sd": 26.129,
+    "bias_vs_uniform_1e-10_pred": -1281.737,
+    "bias_vs_uniform_1e-8_pred": 1283.383,
+    "note": "negative bias vs 1e-10 pred means uniform-fine-precision overestimates a coarser-mixed circuit; positive vs 1e-8 pred means uniform-coarse underestimates"
+  }
+}

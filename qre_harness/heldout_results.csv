@@ -1,0 +1,11 @@
+instance,T_base,R,c_bar,T_predicted,T_observed,error,relative_error,in_anchor_set,note
+TFIM-J1.0,248,128,101.06,13183.68,13432,248.32,0.018487,yes,anchor instance (c_cal=103 back-computed); observed but excluded from independent stats
+TFIM-J0.5,248,128,101.06,13183.68,13432,248.32,0.018487,no,never used for calibration
+TFIM-h0.3,248,128,101.06,13183.68,13432,248.32,0.018487,no,never used for calibration
+TFIM-32,504,256,101.06,26375.36,26872,496.64,0.018482,no,never used for calibration
+TFIM-64,1016,512,101.06,52758.72,53752,993.28,0.018479,no,never used for calibration
+Hubbard-32,1016,512,101.06,52758.72,53752,993.28,0.018479,no,never used for calibration
+Hubbard-64,2040,1024,101.06,105525.44,107512,1986.56,0.018478,no,never used for calibration
+Chem-H2,56,32,101.06,3289.92,3352,62.08,0.01852,no,never used for calibration
+Chem-LiH,4088,2048,101.06,211058.88,215032,3973.12,0.018477,no,never used for calibration
+QPE-7,0,21,101.06,2122.26,2163,40.74,0.018835,no,never used for calibration

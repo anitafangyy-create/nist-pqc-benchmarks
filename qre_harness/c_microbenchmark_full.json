@@ -1,0 +1,255 @@
+{
+  "method": "pyLIQTR rz_decomp single-rotation synthesis (Ross\u2013Selinger grid)",
+  "angles": [
+    0.1234567,
+    0.31415926,
+    0.52359877,
+    0.69314718,
+    0.87396487,
+    1.04719755,
+    1.25663706,
+    1.58079632,
+    1.81379809,
+    2.19911486
+  ],
+  "epsilons": [
+    0.0001,
+    1e-06,
+    1e-08,
+    1e-10
+  ],
+  "note": "independent microbenchmark; not derived from TFIM totals",
+  "rows": [
+    {
+      "epsilon": 0.0001,
+      "angle": 0.1234567,
+      "t_per_rotation": 40
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 0.31415926,
+      "t_per_rotation": 40
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 0.52359877,
+      "t_per_rotation": 36
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 0.69314718,
+      "t_per_rotation": 42
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 0.87396487,
+      "t_per_rotation": 38
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 1.04719755,
+      "t_per_rotation": 36
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 1.25663706,
+      "t_per_rotation": 38
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 1.58079632,
+      "t_per_rotation": 42
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 1.81379809,
+      "t_per_rotation": 42
+    },
+    {
+      "epsilon": 0.0001,
+      "angle": 2.19911486,
+      "t_per_rotation": 38
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.1234567,
+      "t_per_rotation": 62
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.31415926,
+      "t_per_rotation": 62
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.52359877,
+      "t_per_rotation": 62
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.69314718,
+      "t_per_rotation": 64
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 0.87396487,
+      "t_per_rotation": 60
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 1.04719755,
+      "t_per_rotation": 60
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 1.25663706,
+      "t_per_rotation": 64
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 1.58079632,
+      "t_per_rotation": 58
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 1.81379809,
+      "t_per_rotation": 60
+    },
+    {
+      "epsilon": 1e-06,
+      "angle": 2.19911486,
+      "t_per_rotation": 60
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.1234567,
+      "t_per_rotation": 76
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.31415926,
+      "t_per_rotation": 84
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.52359877,
+      "t_per_rotation": 78
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.69314718,
+      "t_per_rotation": 82
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 0.87396487,
+      "t_per_rotation": 80
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 1.04719755,
+      "t_per_rotation": 78
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 1.25663706,
+      "t_per_rotation": 82
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 1.58079632,
+      "t_per_rotation": 82
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 1.81379809,
+      "t_per_rotation": 80
+    },
+    {
+      "epsilon": 1e-08,
+      "angle": 2.19911486,
+      "t_per_rotation": 78
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.1234567,
+      "t_per_rotation": 100
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.31415926,
+      "t_per_rotation": 102
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.52359877,
+      "t_per_rotation": 102
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.69314718,
+      "t_per_rotation": 100
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 0.87396487,
+      "t_per_rotation": 102
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 1.04719755,
+      "t_per_rotation": 100
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 1.25663706,
+      "t_per_rotation": 100
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 1.58079632,
+      "t_per_rotation": 102
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 1.81379809,
+      "t_per_rotation": 104
+    },
+    {
+      "epsilon": 1e-10,
+      "angle": 2.19911486,
+      "t_per_rotation": 106
+    }
+  ],
+  "summary": {
+    "0.0001": {
+      "mean": 39.2,
+      "sd": 2.35,
+      "min": 36,
+      "max": 42,
+      "n": 10
+    },
+    "1e-06": {
+      "mean": 61.2,
+      "sd": 1.93,
+      "min": 58,
+      "max": 64,
+      "n": 10
+    },
+    "1e-08": {
+      "mean": 80,
+      "sd": 2.49,
+      "min": 76,
+      "max": 84,
+      "n": 10
+    },
+    "1e-10": {
+      "mean": 101.8,
+      "sd": 1.99,
+      "min": 100,
+      "max": 106,
+      "n": 10
+    }
+  },
+  "elapsed_s": 10.9
+}

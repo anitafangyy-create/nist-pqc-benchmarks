@@ -1,0 +1,23 @@
+{
+  "method": "independent_rotation_microbenchmark",
+  "epsilon_values": [
+    0.0001,
+    1e-06,
+    1e-08,
+    1e-10
+  ],
+  "n_angles_per_precision": 100,
+  "angle_seed": 20261026,
+  "special_angle_exclusion": "Clifford k*pi/2 and dyadic k*pi/2^m (m<=8), tol 1e-06",
+  "calibration_dataset": "calibration_angles.csv",
+  "heldout_dataset": "all 10 ledger instances (TFIM-J1.0 excluded from independent stats)",
+  "use_anchor_instance": false,
+  "post_calibration_updates": false,
+  "c_bar_per_epsilon": {
+    "0.0001": 40.32,
+    "1e-06": 60.66,
+    "1e-08": 81.02,
+    "1e-10": 101.06
+  },
+  "note": "calibration frozen before any heldout prediction; parameters not modified afterwards"
+}

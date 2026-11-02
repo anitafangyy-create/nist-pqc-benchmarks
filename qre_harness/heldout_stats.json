@@ -1,0 +1,24 @@
+{
+  "eps_ref": 1e-10,
+  "all_10_instances": {
+    "n": 10,
+    "MAE": 929.066,
+    "RMSE": 1488.035,
+    "mean_abs_relative_error": 0.018521,
+    "instances_with_zero_observed": []
+  },
+  "heldout_9_excluding_anchor_TFIM_J1_0": {
+    "n": 9,
+    "MAE": 1004.704,
+    "RMSE": 1566.341,
+    "mean_abs_relative_error": 0.018525,
+    "instances_with_zero_observed": []
+  },
+  "anchor_only_TFIM_J1_0": {
+    "n": 1,
+    "MAE": 248.32,
+    "RMSE": 248.32,
+    "mean_abs_relative_error": 0.018487,
+    "instances_with_zero_observed": []
+  }
+}

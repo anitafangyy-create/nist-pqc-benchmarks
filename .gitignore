@@ -1,0 +1,47 @@
+# ============================================================
+# nist-pqc-benchmarks — code/data repository ignore rules
+# 本仓库只跟踪源码、小体积数据与说明文档；论文稿件在仓库外
+# （同级 ../paper_manuscript/）单独管理，不进入版本库。
+# ============================================================
+
+# ---- Python 运行环境与编译产物 ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.o
+*.a
+*.so
+
+# ---- 本地虚拟环境 ----
+.venv-qre/
+venv/
+.env/
+
+# ---- 系统 / IDE ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ---- 渲染与预览缓存 ----
+.preview/
+
+# ---- 论文稿件与文档产物（物理已移出仓库，此处兜底双保险）----
+*.docx
+*.doc
+*.pdf
+*.html
+*.svg
+*.url
+*.rtf
+
+# ---- 脚本运行日志（可由源码重新生成，不入库）----
+*_out*.txt
+*_err*.txt
+
+# ---- 打包归档产物（保留源码与原始数据，不跟踪 zip 快照）----
+*.zip
+
+# ---- SPHINCS+ 参考实现编译二进制（保留 C 源码，忽略可执行产物）----
+sphincsplus-master/ref/sphincs+

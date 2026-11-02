@@ -1,0 +1,37 @@
+algorithm,n_qubits,n_terms,epsilon,tool,T,rotations,note
+TFIM-J1.0,16,40,0.0001,B_cirqft_raw,248,128,实测裸值
+TFIM-J1.0,16,40,0.0001,normalized,5624,128,"T_base+R*c, c=42"
+TFIM-J1.0,16,40,0.0001,A_pyliqtr,5624,128,由恒等式
+TFIM-J1.0,16,40,1e-06,B_cirqft_raw,248,128,实测裸值
+TFIM-J1.0,16,40,1e-06,normalized,8184,128,"T_base+R*c, c=62"
+TFIM-J1.0,16,40,1e-06,A_pyliqtr,8184,128,由恒等式
+TFIM-J1.0,16,40,1e-08,B_cirqft_raw,248,128,实测裸值
+TFIM-J1.0,16,40,1e-08,normalized,10744,128,"T_base+R*c, c=82"
+TFIM-J1.0,16,40,1e-08,A_pyliqtr,10744,128,由恒等式
+TFIM-J1.0,16,40,1e-10,B_cirqft_raw,248,128,实测裸值
+TFIM-J1.0,16,40,1e-10,normalized,13432,128,"T_base+R*c, c=103"
+TFIM-J1.0,16,40,1e-10,A_pyliqtr,13432,128,实测@1e-10
+TFIM-J0.5,16,40,0.0001,B_cirqft_raw,248,128,实测裸值
+TFIM-J0.5,16,40,0.0001,normalized,5624,128,"T_base+R*c, c=42"
+TFIM-J0.5,16,40,0.0001,A_pyliqtr,5624,128,由恒等式
+TFIM-J0.5,16,40,1e-06,B_cirqft_raw,248,128,实测裸值
+TFIM-J0.5,16,40,1e-06,normalized,8184,128,"T_base+R*c, c=62"
+TFIM-J0.5,16,40,1e-06,A_pyliqtr,8184,128,由恒等式
+TFIM-J0.5,16,40,1e-08,B_cirqft_raw,248,128,实测裸值
+TFIM-J0.5,16,40,1e-08,normalized,10744,128,"T_base+R*c, c=82"
+TFIM-J0.5,16,40,1e-08,A_pyliqtr,10744,128,由恒等式
+TFIM-J0.5,16,40,1e-10,B_cirqft_raw,248,128,实测裸值
+TFIM-J0.5,16,40,1e-10,normalized,13432,128,"T_base+R*c, c=103"
+TFIM-J0.5,16,40,1e-10,A_pyliqtr,13432,128,实测@1e-10
+TFIM-h0.3,16,56,0.0001,B_cirqft_raw,248,128,实测裸值
+TFIM-h0.3,16,56,0.0001,normalized,5624,128,"T_base+R*c, c=42"
+TFIM-h0.3,16,56,0.0001,A_pyliqtr,5624,128,由恒等式
+TFIM-h0.3,16,56,1e-06,B_cirqft_raw,248,128,实测裸值
+TFIM-h0.3,16,56,1e-06,normalized,8184,128,"T_base+R*c, c=62"
+TFIM-h0.3,16,56,1e-06,A_pyliqtr,8184,128,由恒等式
+TFIM-h0.3,16,56,1e-08,B_cirqft_raw,248,128,实测裸值
+TFIM-h0.3,16,56,1e-08,normalized,10744,128,"T_base+R*c, c=82"
+TFIM-h0.3,16,56,1e-08,A_pyliqtr,10744,128,由恒等式
+TFIM-h0.3,16,56,1e-10,B_cirqft_raw,248,128,实测裸值
+TFIM-h0.3,16,56,1e-10,normalized,13432,128,"T_base+R*c, c=103"
+TFIM-h0.3,16,56,1e-10,A_pyliqtr,13432,128,实测@1e-10

@@ -1,0 +1,31 @@
+paper,year,venue/source,tool_used,states_epsilon,rotations_decomposed,tcount_comparable,notes
+FTCircuitBench: Benchmark Suite for FT Quantum Compilation,2026,arXiv 2601.03185,pyLIQTR/Qualtran,unclear,partial,partial,编译基准；测 rotation 数但不做工具间 T 口径对齐——最接近的竞争工作
+Circuit Cutting Resource Estimation (Yang & Murali),2024,arXiv 2411.17756,Azure QRE,yes,yes,no,单一工具；未跨工具对比
+Benchpress: Quantum SW Performance Benchmark Suite,2024,arXiv 2409.08844,多 SDK,no,unclear,no,测 SDK 运行性能而非容错资源数
+Quantum Resources for Pure Thermal Shadows,2024,arXiv 2409.05777,pyLIQTR,unclear,unclear,no,用 pyLIQTR 分解；未声明 ε
+pyLIQTR for Anti-Corrosion Materials QPE,2024,arXiv 2406.18759,pyLIQTR,unclear,unclear,no,工程化资源估计；口径未声明
+AppQSim: Hamiltonian Simulation Benchmarks,2025,arXiv 2503.04298,多,unclear,unclear,partial,应用导向基准；区分性成本指标
+Hardware-Tailored Magic Distillation (Si Spin),2026,arXiv 2605.28936,Azure/自研,yes,yes,partial,自底向上+自顶向下；走到物理层
+Orchestrating Multi-Level Magic Distillation,2025,arXiv 2509.24402,自研,yes,yes,partial,蒸馏工厂调度；T 口径内部一致
+Block encoding low gate count 2nd-quantized Hamiltonians,2025,arXiv 2510.08644,解析(Clifford+T),unclear,yes,partial,报告 T 计数渐近；自定义口径
+Quantum-classical crossover FT dynamics,2026,arXiv 2607.16116,自研(analog rotation),yes,no,no,部分容错+analog rotation；与全分解口径不同
+FLASQ cost model (Huggins et al Google),2025,arXiv 2511.08508,自研 cost model,unclear,partial,partial,明确批评"只数 T-count"指标不足——与本文论点同向
+Practical QA on partially FT (Fujitsu STAR),2024,arXiv 2408.14848,自研(analog rotation state),yes,no,no,避免蒸馏；旋转门不分解为 T
+HHL space/time/energy estimate (Tu et al),2025,arXiv 2502.11239,自研(15/116/225 蒸馏),yes,yes,partial,显式 ε~0.01；自定义魔法蒸馏模型
+FT simulation generalized Hubbard (Tile Trotter),2025,arXiv 2501.10314,解析,unclear,yes,partial,Trotter vs Qubitization 门数对比
+FT molecular systems survey,2025,arXiv 2502.02139,综述,n/a,n/a,n/a,综述；可作为相关工作引用
+Magic states rarely most important (concat codes),2024,arXiv 2411.01880,解析(unclotted),n/a,no,no,主张 magic 不主导；不比较 T 计数
+Faster chem sim BLISS-THC Active Volume (PsiQuantum),2025,arXiv 2501.06165,自研(runtime),unclear,partial,no,报运行时而非 T 门；硬件相关口径
+Phase estimation partially randomized (Günther),2025,arXiv 2503.05647,解析,unclear,yes,partial,QPE 资源估计；自定义
+QREChem chemistry resource estimator (Otten et al),2023,Quantum Sci. Technol.,QREChem 专用工具,unclear,yes,yes,专门资源估计工具；报 T 门 1e4-1e5 并跨工具比较——本文可直接对话
+Perspective: 25-100 logical qubits for chemistry,2025,arXiv 2506.19337,视角,n/a,n/a,n/a,视角文章
+Trading T gates for dirty qubits (Low/Kliuchnikov),2018,arXiv 1812.00954,合成理论,n/a,yes,n/a,旋转/T 合成权衡理论
+Chemically accurate QPE early-FT (Fujitsu),2026,arXiv 2603.22778,自研 STAR,yes,no,no,部分容错；~1e5 物理比特
+Productionizing quantum mass production (Huggins/Khattar),2025,arXiv 2506.00132,自研,unclear,yes,partial,明确指出"只数 non-Clifford 门的成本模型无优势"——同向证据
+Optimizing multi-level magic factories (1QBit),2024,arXiv 2411.04270,自研(μ/Λ/γ),unclear,yes,partial,架构优化；电路体积口径
+Efficient MSD zero-level distillation,2024,arXiv 2403.03991,蒸馏,n/a,n/a,n/a,蒸馏电路；非资源估计
+Q-Spellbook surface code layouts,2025,arXiv 2502.11253,布局优化,n/a,n/a,n/a,数据块/蒸馏块布局
+Unfolded distillation biased-noise,2025,arXiv 2507.12511,蒸馏,n/a,n/a,n/a,偏向噪声蒸馏
+Surpassing distillation limits with catalysts,2024,arXiv 2410.14547,理论,n/a,n/a,n/a,蒸馏开销理论
+Factor 2048 RSA <1M qubits (Gidney),2025,arXiv 2505.15917,解析(Toffoli/magic cultivation),n/a,partial,no,经典自定义成本模型(Toffoli 计)；与 T-count 口径完全不同
+Encoding magic state break-even (IBM Nature),2023,Nature,n/a,n/a,n/a,n/a,实验

@@ -1,0 +1,555 @@
+{
+  "epsilon_ref": 1e-10,
+  "results": [
+    {
+      "algorithm": "TFIM-J1.0",
+      "n_qubits": 16,
+      "n_terms": 40,
+      "epsilon_ref": 1e-10,
+      "T_base": 248,
+      "R": 128,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 13432,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 13432,
+          "rotations": 0,
+          "Clifford": 27515,
+          "logical_qubits": 22,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 1146,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 0,
+          "logical_qubits": 16,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=772330, runtime=2657200 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 1146,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "TFIM-J0.5",
+      "n_qubits": 16,
+      "n_terms": 40,
+      "epsilon_ref": 1e-10,
+      "T_base": 248,
+      "R": 128,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 13432,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 13432,
+          "rotations": 0,
+          "Clifford": 27515,
+          "logical_qubits": 22,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 1146,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 0,
+          "logical_qubits": 16,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=772330, runtime=2657200 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 1146,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "TFIM-h0.3",
+      "n_qubits": 16,
+      "n_terms": 56,
+      "epsilon_ref": 1e-10,
+      "T_base": 248,
+      "R": 128,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 13432,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 13432,
+          "rotations": 0,
+          "Clifford": 27515,
+          "logical_qubits": 22,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 1146,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 0,
+          "logical_qubits": 16,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=772330, runtime=2657200 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 248,
+          "rotations": 128,
+          "Clifford": 1146,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "TFIM-32",
+      "n_qubits": 32,
+      "n_terms": 84,
+      "epsilon_ref": 1e-10,
+      "T_base": 504,
+      "R": 256,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 26872,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 26872,
+          "rotations": 0,
+          "Clifford": 55063,
+          "logical_qubits": 39,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 504,
+          "rotations": 256,
+          "Clifford": 2326,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 504,
+          "rotations": 256,
+          "Clifford": 0,
+          "logical_qubits": 32,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=933218, runtime=4700800 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 504,
+          "rotations": 256,
+          "Clifford": 2326,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "TFIM-64",
+      "n_qubits": 64,
+      "n_terms": 176,
+      "epsilon_ref": 1e-10,
+      "T_base": 1016,
+      "R": 512,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 53752,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 53752,
+          "rotations": 0,
+          "Clifford": 110163,
+          "logical_qubits": 72,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 1016,
+          "rotations": 512,
+          "Clifford": 4690,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 1016,
+          "rotations": 512,
+          "Clifford": 0,
+          "logical_qubits": 64,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=1454400, runtime=10032000 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 1016,
+          "rotations": 512,
+          "Clifford": 4690,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "Hubbard-32",
+      "n_qubits": 32,
+      "n_terms": 144,
+      "epsilon_ref": 1e-10,
+      "T_base": 1016,
+      "R": 512,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 53752,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 53752,
+          "rotations": 0,
+          "Clifford": 110259,
+          "logical_qubits": 40,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 1016,
+          "rotations": 512,
+          "Clifford": 4786,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 1016,
+          "rotations": 512,
+          "Clifford": 0,
+          "logical_qubits": 32,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=1332450, runtime=10800000 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 1016,
+          "rotations": 512,
+          "Clifford": 4786,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "Hubbard-64",
+      "n_qubits": 64,
+      "n_terms": 304,
+      "epsilon_ref": 1e-10,
+      "T_base": 2040,
+      "R": 1024,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 107512,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 107512,
+          "rotations": 0,
+          "Clifford": 220579,
+          "logical_qubits": 73,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 2040,
+          "rotations": 1024,
+          "Clifford": 9634,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 2040,
+          "rotations": 1024,
+          "Clifford": 0,
+          "logical_qubits": 64,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=1688400, runtime=20118000 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 2040,
+          "rotations": 1024,
+          "Clifford": 9634,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "Chem-H2",
+      "n_qubits": 4,
+      "n_terms": 14,
+      "epsilon_ref": 1e-10,
+      "T_base": 56,
+      "R": 32,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 3352,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 3352,
+          "rotations": 0,
+          "Clifford": 6871,
+          "logical_qubits": 8,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 56,
+          "rotations": 32,
+          "Clifford": 278,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 56,
+          "rotations": 32,
+          "Clifford": 0,
+          "logical_qubits": 4,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=332750, runtime=880000 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 56,
+          "rotations": 32,
+          "Clifford": 278,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "Chem-LiH",
+      "n_qubits": 12,
+      "n_terms": 630,
+      "epsilon_ref": 1e-10,
+      "T_base": 4088,
+      "R": 2048,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 215032,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 215032,
+          "rotations": 0,
+          "Clifford": 443839,
+          "logical_qubits": 22,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 4088,
+          "rotations": 2048,
+          "Clifford": 21950,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 4088,
+          "rotations": 2048,
+          "Clifford": 0,
+          "logical_qubits": 12,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=1203750, runtime=54360000 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 4088,
+          "rotations": 2048,
+          "Clifford": 21950,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "algorithm": "QPE-7",
+      "n_qubits": 7,
+      "n_terms": 0,
+      "epsilon_ref": 1e-10,
+      "T_base": 0,
+      "R": 21,
+      "c_per_rotation_at_ref": 103,
+      "T_total_at_ref": 2163,
+      "attribution_residual": 0,
+      "attribution_ok": true,
+      "tools": [
+        {
+          "tool": "A_pyliqtr",
+          "rotations_decomposed": true,
+          "T": 2163,
+          "rotations": 0,
+          "Clifford": 4337,
+          "logical_qubits": 7,
+          "epsilon_used": 1e-10,
+          "note": "旋转门已按 ε 分解进 T"
+        },
+        {
+          "tool": "B_cirqft",
+          "rotations_decomposed": false,
+          "T": 0,
+          "rotations": 21,
+          "Clifford": 10,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "旋转门单列，未分解"
+        },
+        {
+          "tool": "C_qsharp",
+          "rotations_decomposed": false,
+          "T": 0,
+          "rotations": 21,
+          "Clifford": 0,
+          "logical_qubits": 7,
+          "epsilon_used": null,
+          "note": "Azure QRE (qsharp) 独立栈：Q# 抽象电路(T_base×T + R×Rz)，逻辑级旋转单列；物理级 physicalQubits=721886, runtime=277200 (默认 QEC 配置)"
+        },
+        {
+          "tool": "D_naive",
+          "rotations_decomposed": false,
+          "T": 0,
+          "rotations": 21,
+          "Clifford": 10,
+          "logical_qubits": 0,
+          "epsilon_used": null,
+          "note": "文献捷径：只数 Clifford+T，旋转门不计入"
+        }
+      ],
+      "skipped": []
+    }
+  ]
+}
