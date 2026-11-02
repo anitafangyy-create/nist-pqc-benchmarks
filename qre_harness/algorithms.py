@@ -168,6 +168,126 @@ def build_qpe_7() -> AlgorithmResult:
     return AlgorithmResult(name="QPE-7", block_encoding=circ, n_qubits=7, n_terms=0)
 
 
+# ---------------------------------------------------------------------------
+# P0-2 新增电路族（2026-11-02）：结构独立于 PauliLCU 家族的整电路实例
+# 目的：跨电路族泛化验证 + 压力测试
+#   - Arithmetic（加法器/比较器/AND树）：Toffoli 主导，R≈0 → 压力端 A（T_base ≫ R·c）
+#   - QFT：特殊（dyadic）角度密集，无 Toffoli → 压力端 B（T_base ≪ R·c）
+#   - Phase Gradient：重复 dyadic 角度
+# 全部为 cirq 电路，走工具 A（pyLIQTR 完整编译）/ B（cirq_ft t_complexity）。
+# ---------------------------------------------------------------------------
+def _cuccaro_adder(n: int) -> cirq.Circuit:
+    """Cuccaro et al. 2004 ripple-carry adder：a + b，和写入 a 位。
+    MAJ/UMA 各用 1 Toffoli + 2 CNOT，n-bit 共 2n Toffoli，R = 0。"""
+    import cirq
+    q = cirq.LineQubit.range(2 * n + 1)  # a[0..n-1], b[n..2n-1], carry=q[2n]
+    c = cirq.Circuit()
+    carry = q[2 * n]
+    # MAJ 阶段（进位传播）
+    for i in range(n):
+        a, b = q[i], q[n + i]
+        c.append(cirq.CNOT(a, b))
+        c.append(cirq.CNOT(a, carry))
+        c.append(cirq.TOFFOLI(b, carry, a))
+    # UMA 阶段（求和 + 还原）
+    for i in reversed(range(n)):
+        a, b = q[i], q[n + i]
+        c.append(cirq.CNOT(carry, a))
+        c.append(cirq.CNOT(a, b))
+        c.append(cirq.TOFFOLI(b, a, carry))
+    return c
+
+
+def _comparator(n: int) -> cirq.Circuit:
+    """n-bit 比较器：flag = (a < b)，逐位 Toffoli 链，R = 0。"""
+    import cirq
+    q = cirq.LineQubit.range(2 * n + 1)
+    c = cirq.Circuit()
+    flag = q[2 * n]
+    for i in reversed(range(n)):
+        c.append(cirq.X(q[i]))
+        c.append(cirq.TOFFOLI(q[i], q[n + i], flag))
+        c.append(cirq.X(q[i]))
+    return c
+
+
+def _and_tree(n: int) -> cirq.Circuit:
+    """n 输入 AND 树（n 为 2 的幂）：log2(n) 层 Toffoli，R = 0。"""
+    import cirq
+    q = cirq.LineQubit.range(2 * n - 1)  # 叶子在前 n 位，内部节点在后
+    c = cirq.Circuit()
+    level = list(range(n))
+    idx = n
+    while len(level) > 1:
+        nxt = []
+        for j in range(0, len(level), 2):
+            c.append(cirq.TOFFOLI(q[level[j]], q[level[j + 1]], q[idx]))
+            nxt.append(idx)
+            idx += 1
+        level = nxt
+    return c
+
+
+def _qft(n: int) -> cirq.Circuit:
+    """n-qubit QFT：受控相位阶梯（dyadic 特殊角）+ H，无 Toffoli。"""
+    import cirq
+    q = cirq.LineQubit.range(n)
+    c = cirq.Circuit()
+    for j in range(n):
+        for k in range(j):
+            c.append(cirq.CZPowGate(exponent=2.0 / 2 ** (j - k + 1)).on(q[j], q[k]))
+        c.append(cirq.H(q[j]))
+    return c
+
+
+def _phase_gradient(n: int) -> cirq.Circuit:
+    """n-qubit phase-gradient state prep：Rz(2π/2^k) per qubit + H（重复 dyadic 角）。"""
+    import cirq
+    import numpy as np
+    q = cirq.LineQubit.range(n)
+    c = cirq.Circuit()
+    for k in range(n):
+        c.append(cirq.rz(2.0 * np.pi / 2 ** (k + 1)).on(q[k]))
+        c.append(cirq.H(q[k]))
+    return c
+
+
+def _reg_circuit(name: str, n_qubits: int, circ: cirq.Circuit) -> AlgorithmResult:
+    return AlgorithmResult(name=name, block_encoding=circ, n_qubits=n_qubits, n_terms=0)
+
+
+def build_adder_8() -> AlgorithmResult:
+    return _reg_circuit("Adder-8", 17, _cuccaro_adder(8))
+
+
+def build_adder_16() -> AlgorithmResult:
+    return _reg_circuit("Adder-16", 33, _cuccaro_adder(16))
+
+
+def build_comparator_8() -> AlgorithmResult:
+    return _reg_circuit("Comparator-8", 17, _comparator(8))
+
+
+def build_comparator_16() -> AlgorithmResult:
+    return _reg_circuit("Comparator-16", 33, _comparator(16))
+
+
+def build_andtree_8() -> AlgorithmResult:
+    return _reg_circuit("ANDTree-8", 15, _and_tree(8))
+
+
+def build_qft_8() -> AlgorithmResult:
+    return _reg_circuit("QFT-8", 8, _qft(8))
+
+
+def build_qft_16() -> AlgorithmResult:
+    return _reg_circuit("QFT-16", 16, _qft(16))
+
+
+def build_phase_gradient_8() -> AlgorithmResult:
+    return _reg_circuit("PhaseGradient-8", 8, _phase_gradient(8))
+
+
 ALGORITHMS: dict[str, Callable[[], AlgorithmResult]] = {
     # 已有基线
     "TFIM-J1.0": build_tfim_j10,
@@ -183,4 +303,14 @@ ALGORITHMS: dict[str, Callable[[], AlgorithmResult]] = {
     "Chem-LiH": build_chem_lih,
     # 族外独立实例（非 PauliLCU 家族，打破 T_base=2R-8）
     "QPE-7": build_qpe_7,
+    # P0-2 新增：Arithmetic（Toffoli 主导，压力端 A）
+    "Adder-8": build_adder_8,
+    "Adder-16": build_adder_16,
+    "Comparator-8": build_comparator_8,
+    "Comparator-16": build_comparator_16,
+    "ANDTree-8": build_andtree_8,
+    # P0-2 新增：QFT / Phase Gradient（特殊角，压力端 B）
+    "QFT-8": build_qft_8,
+    "QFT-16": build_qft_16,
+    "PhaseGradient-8": build_phase_gradient_8,
 }
