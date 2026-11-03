@@ -1,0 +1,1492 @@
+{
+  "purpose": "P0-3 per-angle independent synthesis audit for rotation-dominated instances (QFT-8/16, PhaseGradient-8, QPE-7): GridSynth + pyLIQTR rz_decomp actual per-rotation T counts vs the uniform c(eps)=103 model",
+  "epsilon": 1e-10,
+  "gridsynth_seed": 20261026,
+  "rz_decomp": "pyLIQTR rz_decomp use_random_decomp=False",
+  "gridsynth": "pygridsynth 2.0.0 GridSynth",
+  "c_ref_model": 103,
+  "note": "Angles are extracted exactly from the cirq circuit constructions (CZPowGate exponent e -> phase angle pi*e; normalized to [0,2pi) for GridSynth, raw sign preserved for rz_decomp). Truncated angle files are NOT used: smoke tests show 7-8 digit truncation turns Clifford angles into generic-angle syntheses (~100 T) in GridSynth. The T-class theta_class is a theoretical Clifford classification; whether each synthesizer realizes zero cost is measured, not assumed.",
+  "instances": [
+    {
+      "instance": "QFT-8",
+      "n_rotations": 28,
+      "n_Z": 0,
+      "n_S": 7,
+      "n_T": 6,
+      "n_generic": 15,
+      "n_clifford_theory": 13,
+      "sum_t_gridsynth": 2348,
+      "sum_t_rz_decomp": 1498,
+      "model_R_times_103": 2884,
+      "c_ref": 103,
+      "epsilon": 1e-10,
+      "angle_cost_table": [
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        }
+      ]
+    },
+    {
+      "instance": "QFT-16",
+      "n_rotations": 120,
+      "n_Z": 0,
+      "n_S": 15,
+      "n_T": 14,
+      "n_generic": 91,
+      "n_clifford_theory": 29,
+      "sum_t_gridsynth": 11250,
+      "sum_t_rz_decomp": 9146,
+      "model_R_times_103": 12360,
+      "c_ref": 103,
+      "epsilon": 1e-10,
+      "angle_cost_table": [
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.003067961576,
+          "theta_norm": 0.003067961576,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.001533980788,
+          "theta_norm": 0.001533980788,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.003067961576,
+          "theta_norm": 0.003067961576,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000766990394,
+          "theta_norm": 0.000766990394,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.001533980788,
+          "theta_norm": 0.001533980788,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000383495197,
+          "theta_norm": 0.000383495197,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.003067961576,
+          "theta_norm": 0.003067961576,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000766990394,
+          "theta_norm": 0.000766990394,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000191747598,
+          "theta_norm": 0.000191747598,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.001533980788,
+          "theta_norm": 0.001533980788,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000383495197,
+          "theta_norm": 0.000383495197,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 9.5873799e-05,
+          "theta_norm": 9.5873799e-05,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.003067961576,
+          "theta_norm": 0.003067961576,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000766990394,
+          "theta_norm": 0.000766990394,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000191747598,
+          "theta_norm": 0.000191747598,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.001533980788,
+          "theta_norm": 0.001533980788,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000383495197,
+          "theta_norm": 0.000383495197,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.003067961576,
+          "theta_norm": 0.003067961576,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.000766990394,
+          "theta_norm": 0.000766990394,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.001533980788,
+          "theta_norm": 0.001533980788,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.003067961576,
+          "theta_norm": 0.003067961576,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.006135923152,
+          "theta_norm": 0.006135923152,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.012271846303,
+          "theta_norm": 0.012271846303,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        }
+      ]
+    },
+    {
+      "instance": "PhaseGradient-8",
+      "n_rotations": 8,
+      "n_Z": 1,
+      "n_S": 1,
+      "n_T": 1,
+      "n_generic": 5,
+      "n_clifford_theory": 3,
+      "sum_t_gridsynth": 646,
+      "sum_t_rz_decomp": 502,
+      "model_R_times_103": 824,
+      "c_ref": 103,
+      "epsilon": 1e-10,
+      "angle_cost_table": [
+        {
+          "gate": "Rz",
+          "theta_raw": 3.14159265359,
+          "theta_norm": 3.14159265359,
+          "theta_class": "Z",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 1.570796326795,
+          "theta_norm": 1.570796326795,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 0.785398163397,
+          "theta_norm": 0.785398163397,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 0.392699081699,
+          "theta_norm": 0.392699081699,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 0.196349540849,
+          "theta_norm": 0.196349540849,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 0.098174770425,
+          "theta_norm": 0.098174770425,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 0.049087385212,
+          "theta_norm": 0.049087385212,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "Rz",
+          "theta_raw": 0.024543692606,
+          "theta_norm": 0.024543692606,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 104
+        }
+      ]
+    },
+    {
+      "instance": "QPE-7",
+      "n_rotations": 21,
+      "n_Z": 0,
+      "n_S": 5,
+      "n_T": 4,
+      "n_generic": 12,
+      "n_clifford_theory": 9,
+      "sum_t_gridsynth": 1774,
+      "sum_t_rz_decomp": 1204,
+      "model_R_times_103": 2163,
+      "c_ref": 103,
+      "epsilon": 1e-10,
+      "angle_cost_table": [
+        {
+          "gate": "CZ",
+          "theta_raw": 0.1234567,
+          "theta_norm": 0.1234567,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.31415926,
+          "theta_norm": 0.31415926,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.52359877,
+          "theta_norm": 0.52359877,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.69314718,
+          "theta_norm": 0.69314718,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 0.87396487,
+          "theta_norm": 0.87396487,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": 1.04719755,
+          "theta_norm": 1.04719755,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -1.570796326795,
+          "theta_norm": 4.712388980385,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.785398163397,
+          "theta_norm": 5.497787143782,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -1.570796326795,
+          "theta_norm": 4.712388980385,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.392699081699,
+          "theta_norm": 5.890486225481,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.785398163397,
+          "theta_norm": 5.497787143782,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.196349540849,
+          "theta_norm": 6.08683576633,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -1.570796326795,
+          "theta_norm": 4.712388980385,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.392699081699,
+          "theta_norm": 5.890486225481,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.098174770425,
+          "theta_norm": 6.185010536755,
+          "theta_class": "generic",
+          "t_gridsynth": 100,
+          "t_rz_decomp": 100
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.785398163397,
+          "theta_norm": 5.497787143782,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.196349540849,
+          "theta_norm": 6.08683576633,
+          "theta_class": "generic",
+          "t_gridsynth": 104,
+          "t_rz_decomp": 102
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -1.570796326795,
+          "theta_norm": 4.712388980385,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.392699081699,
+          "theta_norm": 5.890486225481,
+          "theta_class": "generic",
+          "t_gridsynth": 102,
+          "t_rz_decomp": 98
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -0.785398163397,
+          "theta_norm": 5.497787143782,
+          "theta_class": "T",
+          "t_gridsynth": 136,
+          "t_rz_decomp": 0
+        },
+        {
+          "gate": "CZ",
+          "theta_raw": -1.570796326795,
+          "theta_norm": 4.712388980385,
+          "theta_class": "S",
+          "t_gridsynth": 0,
+          "t_rz_decomp": 0
+        }
+      ]
+    }
+  ],
+  "elapsed_s": 11.4
+}

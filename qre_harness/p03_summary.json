@@ -1,0 +1,95 @@
+{
+  "purpose": "P0-3 summary: independent per-angle synthesis totals vs pyLIQTR built-in model full-circuit counts, on rotation-dominated instances",
+  "epsilon": 1e-10,
+  "c_ref": 103,
+  "gridsynth": "pygridsynth 2.0.0 GridSynth",
+  "rz_decomp": "pyLIQTR rz_decomp use_random_decomp=False",
+  "headline": {
+    "rz_decomp_scope_overestimate": {
+      "QFT-8": 92.5,
+      "QFT-16": 35.1,
+      "QPE-7": 79.7
+    },
+    "gridsynth_scope_overestimate": {
+      "QFT-8": 22.8,
+      "QFT-16": 9.9,
+      "QPE-7": 21.9
+    },
+    "phase_gradient_near_agreement_rz_pct": 2.8,
+    "note": "pyLIQTR full-circuit counts include every CZPowGate/Rz at the uniform c(eps)=103 rate; independent per-angle synthesis assigns ~0 T to Z/S Clifford angles and a synthesizer-dependent cost to pi/4 (rz_decomp=0, GridSynth~136). Scope differences are therefore dominated by Clifford angles within the rotation set, not by generic-angle synthesis costs."
+  },
+  "instances": [
+    {
+      "instance": "QFT-8",
+      "n_rotations": 28,
+      "clifford_theory": 13,
+      "n_Z": 0,
+      "n_S": 7,
+      "n_T": 6,
+      "n_generic": 15,
+      "pyliqtr_full_circuit_T": 2884,
+      "model_T_base_plus_Rc": 2884,
+      "sum_t_gridsynth": 2348,
+      "sum_t_rz_decomp": 1498,
+      "pyliqtr_vs_gridsynth_pct": 22.8,
+      "pyliqtr_vs_rz_pct": 92.5,
+      "model_vs_gridsynth_pct": 22.8,
+      "model_vs_rz_pct": 92.5,
+      "regime": "B: T_base<<R*c"
+    },
+    {
+      "instance": "QFT-16",
+      "n_rotations": 120,
+      "clifford_theory": 29,
+      "n_Z": 0,
+      "n_S": 15,
+      "n_T": 14,
+      "n_generic": 91,
+      "pyliqtr_full_circuit_T": 12360,
+      "model_T_base_plus_Rc": 12360,
+      "sum_t_gridsynth": 11250,
+      "sum_t_rz_decomp": 9146,
+      "pyliqtr_vs_gridsynth_pct": 9.9,
+      "pyliqtr_vs_rz_pct": 35.1,
+      "model_vs_gridsynth_pct": 9.9,
+      "model_vs_rz_pct": 35.1,
+      "regime": "B: T_base<<R*c"
+    },
+    {
+      "instance": "PhaseGradient-8",
+      "n_rotations": 8,
+      "clifford_theory": 3,
+      "n_Z": 1,
+      "n_S": 1,
+      "n_T": 1,
+      "n_generic": 5,
+      "pyliqtr_full_circuit_T": 516,
+      "model_T_base_plus_Rc": 516,
+      "sum_t_gridsynth": 646,
+      "sum_t_rz_decomp": 502,
+      "pyliqtr_vs_gridsynth_pct": -20.1,
+      "pyliqtr_vs_rz_pct": 2.8,
+      "model_vs_gridsynth_pct": -20.1,
+      "model_vs_rz_pct": 2.8,
+      "regime": "B-ish: T_base<<R*c"
+    },
+    {
+      "instance": "QPE-7",
+      "n_rotations": 21,
+      "clifford_theory": 9,
+      "n_Z": 0,
+      "n_S": 5,
+      "n_T": 4,
+      "n_generic": 12,
+      "pyliqtr_full_circuit_T": 2163,
+      "model_T_base_plus_Rc": 2163,
+      "sum_t_gridsynth": 1774,
+      "sum_t_rz_decomp": 1204,
+      "pyliqtr_vs_gridsynth_pct": 21.9,
+      "pyliqtr_vs_rz_pct": 79.7,
+      "model_vs_gridsynth_pct": 21.9,
+      "model_vs_rz_pct": 79.7,
+      "regime": "out-of-family"
+    }
+  ]
+}
