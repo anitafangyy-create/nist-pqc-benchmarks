@@ -1312,7 +1312,7 @@
       "n_generic": 12,
       "n_clifford_theory": 9,
       "sum_t_gridsynth": 1774,
-      "sum_t_rz_decomp": 1204,
+      "sum_t_rz_decomp": 1202,
       "model_R_times_103": 2163,
       "c_ref": 103,
       "epsilon": 1e-10,
@@ -1331,7 +1331,7 @@
           "theta_norm": 0.31415926,
           "theta_class": "generic",
           "t_gridsynth": 104,
-          "t_rz_decomp": 102
+          "t_rz_decomp": 100
         },
         {
           "gate": "CZ",
@@ -1488,5 +1488,5 @@
       ]
     }
   ],
-  "elapsed_s": 11.4
+  "elapsed_s": 11.5
 }

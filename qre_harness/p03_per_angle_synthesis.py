@@ -26,6 +26,7 @@ from __future__ import annotations
 import csv
 import json
 import math
+import random
 import sys
 import time
 import types
@@ -49,6 +50,11 @@ from algorithms import _qft, _phase_gradient, _qpe_circuit, QPE_ANGLES
 EPS = 1e-10
 SEED = 20261026
 C_REF = 103  # 论文锚定 c_cal(1e-10)
+
+# rz_decomp 的 diophantine 求解器使用 Python random.randint（默认由系统熵播种），
+# 未固定 seed 时同一角度的 T 计数会在进程间波动（如 QFT 的 π/16 角在 100/102 间跳变，
+# QPE-7 合计 1198/1204）。为保证论文数字可复现，每次 rz 调用前固定 random seed：
+# 同一角度得到同一确定性 T 计数，且与调用顺序无关。
 OUT_JSON = "p03_per_angle_synthesis.json"
 OUT_CSV = "p03_per_angle_synthesis.csv"
 
@@ -60,6 +66,7 @@ def gridsynth_t(theta: float, eps: float) -> int:
 
 
 def rz_t(theta: float, eps: float) -> int:
+    random.seed(SEED)  # 固定 diophantine 求解的 random 源，保证可复现（见文件头注释）
     g = rz_decomp(rads=theta, precision=eps, use_random_decomp=False)
     return int(g.get_T_count())
 
