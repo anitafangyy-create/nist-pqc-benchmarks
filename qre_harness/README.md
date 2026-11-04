@@ -59,9 +59,10 @@ c(ε) ≈ 3 · log₂(1/ε)        # Ross–Selinger
 ## 实测环境与运行记录（2026-10-25）
 
 本机（macOS x86_64，Python 3.12.1）venv：`.venv-qre/`（已 gitignore）。锁定版本：
-`pyliqtr==1.4.2`、`qualtran==0.4.0`、`cirq-core==1.4.0`、`openfermion==1.7.0`、`qsharp==1.31.0`、`numba==0.61.2`、`llvmlite==0.44.0`、`numpy==1.26.4`、`openfermionpyscf==0.5`、`pyscf==2.14.0`、`gmpy2==2.3.2`、Julia 1.10.4（`/usr/local/Cellar/julia/1.10.4`）。
+`pyliqtr==1.4.2`、`qualtran==0.4.0`、`cirq-core==1.4.0`、`openfermion==1.7.0`、`qsharp==1.31.0`、`numba==0.61.2`、`llvmlite==0.44.0`、`numpy==1.26.4`、`cvxpy==1.4.3`、`pygridsynth==2.0.0`、`qiskit==2.6.1`、`openfermionpyscf==0.5`、`pyscf==2.14.0`、`gmpy2==2.3.2`、Julia 1.10.4（`/usr/local/Cellar/julia/1.10.4`）。
 
 - **重建 venv 配方**：`llvmlite` 只能 `0.44.0` 配 `numba 0.61.2`（0.50 在 cp312+macOS x86_64 无预编译 wheel，源码编译失败；0.45 与 numba 冲突）。pip 索引：`https://mirrors.huaweicloud.com/repository/pypi/simple/`。
+- **numpy/cvxpy 加装新包时禁止浮动**：qiskit 安装曾把 numpy 升到 2.5.4（破坏 pygridsynth/numba，numba 需 numpy≤2.2），随后 cvxpy 升级又破坏 numpy 1.26 的 `coo_backend`；最终必须 `numpy==1.26.4 + cvxpy==1.4.3`。qiskit 2.6.1 的部分 pass 依赖 numpy≥2 的 `np.array(copy=None)`（如 `ConsolidateBlocks`），在固定 numpy 1.26 下不可用——p05 只使用保留 Clifford+T 门集的互逆相消 passes（`CommutativeCancellation`/`CommutativeInverseCancellation`），不用会重合成 u/p 门的 1q 优化 pass。
 - **pyliqtr patch（重装会丢）**：`pyLIQTR/ProblemInstances/ChemicalHamiltonian.py` 第 35 行 `juliapkg.require_julia("~1.8,~1.9")` 已改为 `"^1.10.3"`（对齐 juliacall 0.9.37），否则 juliapkg 报 "compat entries have empty intersection"。
 - **Julia**：官方源下载极慢，用清华镜像 `julia-1.10.4-mac64.tar.gz`。沙箱运行时需把 `lib/julia/*.dylib` 复制进 sandbox_runtime lib 目录（否则 dlopen libgcc_s.1.1.dylib 失败），且该目录的 `libgmp.10.dylib` 已被 brew gmp 6.3.0 覆盖（否则 gmpy2 报 `___gmpz_prevprime` 符号缺失）。
 - **执行命令**：`python3 run.py --algorithm all --tools A,B,C,D --out ledger.json`。9 实例 A/B/C/D 全部成功，恒等式 `T_base + R×103 = T_total` 残差 0。
