@@ -1,7 +1,7 @@
 # qre_harness — 跨工具量子资源估计统一 harness
 
 输入一个算法实例，统一调用 4 个资源估计工具，输出**归一化规范账本 JSON**。
-服务于论文 *Fault-Tolerant T-Counts Are Not Cross-Tool Comparable*。
+服务于论文 *When Are Fault-Tolerant T-Counts Comparable Across Tools? A Normalization Protocol and Literature Audit*（Quantum Science and Technology, submitted）。
 
 ## 核心思想
 
